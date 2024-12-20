@@ -106,7 +106,9 @@ sudo docker run -d -p 8080:80 --name dotnet mydotnetapp
 **Push the SAP.NET Application Image to dockerhub local registry**
 
 sudo docker login
+
 sudo docker tag mydotnetapp ranahesham/mydotnetapp:v1
+
 sudo docker push ranahesham/mydotnetapp:v1
 
 ![image](https://github.com/user-attachments/assets/47a933fe-e229-474e-8b70-e68e022e0fa3)
