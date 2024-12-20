@@ -9,10 +9,15 @@ https://hbayraktar.medium.com/how-to-dockerize-a-net-8-asp-net-core-web-applicat
 **Create a simple ASP.NET app**
 
 sudo mkdir /var/www/spot_ubuntu
+
 sudo chmod -R 777 /var/www/spot_ubuntu
+
 sudo apt install snap
+
 sudo snap install dotnet-sdk --classic --channel=7.0
+
 sudo ln -s /snap/bin/dotnet-sdk.dotnet /usr/bin/dotnet
+
 dotnet --version ---> to check
 
 dotnet new webapp -o MyApp --no-https ---> create a new app & create a new directory "MyApp"
@@ -20,6 +25,7 @@ dotnet new webapp -o MyApp --no-https ---> create a new app & create a new direc
 ![image](https://github.com/user-attachments/assets/d5f4d3cf-3abc-46dc-adf1-ff693895b163)
 
 cd MyApp/ ---> go to the directory
+
 dotnet build
 
 ![image](https://github.com/user-attachments/assets/0f1880a9-97d9-47f3-9382-227c235a2820)
@@ -48,7 +54,9 @@ Environment=ASPNETCORE_ENVIRONMENT=Production
 WantedBy=multi-user.target
 ```
 sudo systemctl daemon-reload
+
 sudo systemctl start app
+
 sudo systemctl status app
 
 ![image](https://github.com/user-attachments/assets/fd0d7faf-b3cc-4829-a89b-77abc15d14f5)
